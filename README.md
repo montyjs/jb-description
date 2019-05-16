@@ -1,6 +1,7 @@
-# Project Name
+# Front End Capstone
 
-> Project description
+
+> This was made during my time at Hack Reactor. It is a UI clone of a REI product page.
 
 ## Related Projects
 
