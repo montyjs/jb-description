@@ -4,7 +4,7 @@ const create = () => {
   const result = [];
   const data = [];
   let i = 0;
-  while (i < 100) {
+  while (i < 99) {
     const arr = [];
     for (let j = 0; j < 11; j++) {
       arr.push(faker.lorem.word());
@@ -20,4 +20,6 @@ const create = () => {
 
 const dummyData = create();
 
-export default dummyData;
+module.exports = {
+  dummyData,
+};

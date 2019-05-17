@@ -1,10 +1,10 @@
-DROP DATABASE IF EXISTS descriptionData;
+DROP DATABASE IF EXISTS descriptions;
 
-CREATE DATABASE descriptionData;
+CREATE DATABASE descriptions;
 
-USE descriptionData;
+USE descriptions;
 
-CREATE TABLE descriptions (
+CREATE TABLE descriptionData (
   id int NOT NULL AUTO_INCREMENT,
   name_ varchar(50) NOT NULL,
   best_use varchar(50) NOT NULL,
@@ -20,4 +20,8 @@ CREATE TABLE descriptions (
   PRIMARY KEY (ID)
 );
 
-INSERT INTO transactions (id, name_, best_use, climbing_show_type, last_, upper_, lining_, outsole_, footwear_closure, resole_, gender_, weight_) VALUES ('La Sportiva Tarantulace Climbing Shoes', 'Rock Climbing', 'Neutral', 'Slip-Lasted', 'Leather/synthetic leather', 'No', 'FriXion RS rubber', 'Lace-up', 'Yes', 'Unisex', '1 lb. 2.3 oz.' );
+INSERT INTO descriptionData (id, name_, best_use, climbing_show_type, last_, upper_, lining_, outsole_, footwear_closure, resole_, gender_, weight_) 
+  VALUES ('La Sportiva Tarantulace Climbing Shoes', 'Rock Climbing', 'Neutral', 'Slip-Lasted', 'Leather/synthetic leather', 'No', 'FriXion RS rubber', 'Lace-up', 'Yes', 'Unisex', '1 lb. 2.3 oz.' );
+  
+
+
