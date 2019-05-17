@@ -1,25 +1,26 @@
 const faker = require('faker');
+const { pool } = require('./index');
 
-const create = () => {
-  const result = [];
-  const data = [];
+const seed = () => {
   let i = 0;
   while (i < 99) {
-    const arr = [];
-    for (let j = 0; j < 11; j++) {
-      arr.push(faker.lorem.word());
+    let arr = [];
+    if (i === 0) {
+      arr = ['La Sportiva Tarantulace Climbing Shoes', 'Rock Climbing', 'Neutral', 'Slip-Lasted', 'Leather/synthetic leather', 'No', 'FriXion RS rubber', 'Lace-up', 'Yes', 'Unisex', '1 lb. 2.3 oz.']
+      pool.query('INSERT INTO descriptionData (name_, best_use, climbing_show_type, last_, upper_, lining_, outsole_, footwear_closure, resole_, gender_, weight_) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)', arr, (error) => {
+        if (error) { throw error; }
+      });
+      i += 1;
+    } else {
+      for (let j = 0; j < 11; j += 1) {
+        arr.push(faker.lorem.word());
+      }
+      pool.query('INSERT INTO descriptionData (name_, best_use, climbing_show_type, last_, upper_, lining_, outsole_, footwear_closure, resole_, gender_, weight_) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)', arr, (error) => {
+        if (error) { throw error; }
+      });
+      i += 1;
     }
-    data.push(arr);
-    i += 1;
   }
-  data.forEach((doc) => {
-    result.push(`VALUES ('${doc[0]}', '${doc[1]}', '${doc[2]}', '${doc[3]}', '${doc[4]}', '${doc[5]}', '${doc[6]}', '${doc[7]}', '${doc[8]}', '${doc[9]}', '${doc[10]}');`)
-  });
-  return result;
 };
 
-const dummyData = create();
-
-module.exports = {
-  dummyData,
-};
+seed();
