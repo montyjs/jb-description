@@ -16,9 +16,3 @@ CREATE TABLE descriptionData (
   gender_ varchar(50) NOT NULL,
   weight_ varchar(50) NOT NULL
 );
-
-INSERT INTO descriptionData (name_, best_use, climbing_show_type, last_, upper_, lining_, outsole_, footwear_closure, resole_, gender_, weight_) 
-  VALUES ('La Sportiva Tarantulace Climbing Shoes', 'Rock Climbing', 'Neutral', 'Slip-Lasted', 'Leather/synthetic leather', 'No', 'FriXion RS rubber', 'Lace-up', 'Yes', 'Unisex', '1 lb. 2.3 oz.' );
-  
-
-

@@ -3,7 +3,7 @@ const { pool } = require('./index');
 
 const seed = () => {
   let i = 0;
-  while (i < 99) {
+  while (i < 100) {
     let arr = [];
     if (i === 0) {
       arr = ['La Sportiva Tarantulace Climbing Shoes', 'Rock Climbing', 'Neutral', 'Slip-Lasted', 'Leather/synthetic leather', 'No', 'FriXion RS rubber', 'Lace-up', 'Yes', 'Unisex', '1 lb. 2.3 oz.']
