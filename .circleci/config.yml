@@ -1,0 +1,12 @@
+version: 2
+ jobs:
+   build:
+     docker:
+    #  virtual machine to run your code
+       - image: circleci/node:7
+     steps:
+      # checkout the repo
+       - checkout
+      #  commands to run to complete testing
+       - run: npm install
+      #  - run: jest tests/test-suite.js
