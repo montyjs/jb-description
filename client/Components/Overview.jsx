@@ -4,7 +4,7 @@ import React from 'react';
 const Overview = ({
   climbingshoetype, last, resole, upper,
 }) => (
-  <div className="overview-containter">
+  <div className="overview-container">
     <div className="Overview-Quote">
       <h1>Designed for the climber looking for a single pair to do it all, the La Sportiva Tarantulace are jack-of-all-trades climbing shoes comfortable enough for all-day climbs or a trip to the rock gym.</h1>
     </div>

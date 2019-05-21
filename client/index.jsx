@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import style from './main.scss';
 
 import Overview from './Components/Overview.jsx';
 import Description from './Components/Description.jsx';
@@ -37,7 +38,7 @@ class App extends React.Component {
   render() {
     const { data } = this.state;
     return (
-      <div>
+      <div className="descriptionWrapper">
         <Overview {...data} />
         <Description {...data} />
         <SizeChart />
