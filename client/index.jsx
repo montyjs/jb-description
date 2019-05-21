@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
-import Overview from './Components/Overview';
-import Description from './Components/Description';
-import SizeChart from './Components/SizeChart';
+import Overview from './Components/Overview.jsx';
+import Description from './Components/Description.jsx';
+import SizeChart from './Components/SizeChart.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,20 +25,21 @@ class App extends React.Component {
       url: '/descriptions',
       success: (data) => {
         this.setState({
-          data: data
+          data,
         });
       },
       error: () => {
-        console.log('error');
+        console.error('err');
       },
     });
   }
 
   render() {
+    const { data } = this.state;
     return (
       <div>
-        <Overview props={this.state.data} />
-        <Description props={this.state.data} />
+        <Overview {...data} />
+        <Description {...data} />
         <SizeChart />
       </div>
     );
