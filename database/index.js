@@ -13,7 +13,7 @@ const getDescriptions = (cb) => {
     if (error) {
       throw error;
     } else {
-      cb(error, results.rows);
+      cb(error, results.rows[0]);
     }
   });
 };
