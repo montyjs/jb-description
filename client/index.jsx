@@ -28,6 +28,9 @@ class App extends React.Component {
           data: data
         });
       },
+      error: () => {
+        console.log('error');
+      },
     });
   }
 
