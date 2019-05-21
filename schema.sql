@@ -10,7 +10,7 @@ CREATE TABLE descriptionData (
   id SMALLSERIAL,
   name_ varchar(50) NOT NULL,
   best_use varchar(50) NOT NULL,
-  climbing_show_type varchar(50) NOT NULL,
+  climbing_shoe_type varchar(50) NOT NULL,
   last_ varchar(50) NOT NULL,
   upper_ varchar(50) NOT NULL,
   lining_ varchar(50) NOT NULL,
