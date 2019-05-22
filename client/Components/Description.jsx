@@ -52,7 +52,7 @@ const Description = ({
               </tr>
               <tr>
                 <td><b>Outsole</b></td>
-                <td>{`${outsole}`}</td>
+                <td>{outsole}</td>
               </tr>
               <tr>
                 <td><b>Footwear Closure</b></td>

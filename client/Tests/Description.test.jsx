@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import $ from 'jquery';
 import Description from '../Components/Description';
 
 const dummyData = {
@@ -7,16 +8,27 @@ const dummyData = {
   climbingshoetype: 'Neutral',
   footwearclosure: 'Lace-up',
   gender: 'Unisex',
-  id: 1,
   last: 'Slip-Lasted',
   lining: 'No',
-  name: 'La Sportiva Tarantulace Climbing Shoes',
   outsole: 'FriXion RS rubber',
   resole: 'Yes',
   upper: 'Leather/synthetic leather',
   weight: '1 lb. 2.3 oz.',
 };
 
-it('Description renders without crashing', () => {
-  shallow(<Description {...dummyData} />);
+describe('Description Renders', () => {
+  it('Description renders without crashing', () => {
+    shallow(<Description {...dummyData} />);
+  });
+});
+
+describe('Description', () => {
+  it('renders table with all data', () => {
+    const wrapper = shallow(<Description {...dummyData} />);
+    const keys = Object.keys(dummyData);
+    keys.map((key) => {
+      const value = dummyData[key];
+      return expect(wrapper.contains(<td>{`${value}`}</td>)).toBe(true);
+    });
+  });
 });
