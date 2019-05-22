@@ -1,3 +1,56 @@
+
+
 .descriptionWrapper {
-  
+  .description-container {
+
+  }
+
+  .overview-container {
+
+  }
+
+  .sizeChart-container {
+    padding-left: 100px;
+    
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      border-top: 1px solid grey;
+    }
+
+    td {
+      margin: 0;
+      border: 1px solid grey;
+      white-space: nowrap;
+      border-top-width: 0px;
+    }
+
+    div {
+      width: 500px;
+      overflow-x: scroll;
+      margin-left: 5em;
+      padding: 10;
+    }
+
+    .headlong {
+      font-weight: bold;
+    }
+
+    .headcol {
+      //position: absolute;
+      font-weight: bold;
+      width: 5em;
+      left: 0;
+      top: auto;
+      border-top-width: 1px;
+      /*only relevant for first row*/
+      margin-top: -1px;
+      /*compensate for top border*/
+    }
+
+    .long {
+      background: white;
+      letter-spacing: 1em;
+    }
+  }
 }
