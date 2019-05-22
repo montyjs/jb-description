@@ -2,11 +2,10 @@ import React from 'react';
 
 const Description = ({
   outsole, bestuse, climbingshoetype, last, upper, lining, footwearclosure, resole, gender, weight,
-}) => {
-  const style = { fontWeight: 'bold' };
-  return (
+}) => (
+  <div>
+    <div className="description-title">The nitty gritty</div>
     <div className="description-container">
-      <h1>The nitty gritty</h1>
       <div className="description-features">
         <h2>Features</h2>
         <ul>
@@ -21,11 +20,12 @@ const Description = ({
           <li>Quick-pull lacing system delivers a snug, precise fit</li>
           <li>Shoes can be resoled</li>
         </ul>
-        <h3>Imported</h3>
+        <div>Imported</div>
+        <br />
         <a href="https://www.rei.com/b/la-sportiva/c/mens-climbing-shoes">View all La Sportiva Men's Climbing Shoes</a>
       </div>
       <div className="description-tech-specs">
-        <h2>Technical Specs</h2>
+        <h2 className="tech-title">Technical Specs</h2>
         <div className="description-table">
           <table>
             <tbody>
@@ -74,7 +74,6 @@ const Description = ({
         </div>
       </div>
     </div>
-  );
-};
-
+  </div>
+);
 export default Description;

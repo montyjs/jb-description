@@ -5,25 +5,27 @@ const Overview = ({
   climbingshoetype, last, resole, upper,
 }) => (
   <div className="overview-container">
-    <div className="Overview-Quote">
-      <h1>Designed for the climber looking for a single pair to do it all, the La Sportiva Tarantulace are jack-of-all-trades climbing shoes comfortable enough for all-day climbs or a trip to the rock gym.</h1>
+    <div className="overview-quote-container">
+      <div className="overview-quote">
+        Designed for the climber looking for a single pair to do it all, the La Sportiva Tarantulace are jack-of-all-trades climbing shoes comfortable enough for all-day climbs or a trip to the rock gym.
+      </div>
     </div>
-    <div className="Overview-Specs">
+    <div className="overview-specs">
       <div className="os-item">
-        <span className="os-title">Climbing Shoe Type</span>
-        <div>{`${climbingshoetype}`}</div>
+        <span className="os-title">CLIMBING SHOE TYPE</span>
+        <div className="os-value">{`${climbingshoetype}`}</div>
       </div>
       <div className="os-item">
-        <span className="os-title">Last</span>
-        <div>{`${last}`}</div>
+        <span className="os-title">LAST</span>
+        <div className="os-value">{`${last}`}</div>
       </div>
       <div className="os-item">
-        <span className="os-title">Can Be Resoled</span>
-        <div>{`${resole}`}</div>
+        <span className="os-title">CAN BE RESOLVED</span>
+        <div className="os-value">{`${resole}`}</div>
       </div>
       <div className="os-item">
-        <span className="os-title">Upper</span>
-        <div>{`${upper}`}</div>
+        <span className="os-title">UPPER</span>
+        <div className="os-value">{`${upper}`}</div>
       </div>
     </div>
   </div>

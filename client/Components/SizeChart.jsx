@@ -18,24 +18,26 @@ const usWomens = [5, 5.5, '5.5+', 6, 6.5, 7, 7.5, '7.5+', 8, 8.5, 9, 9.5, 9.5, 1
 const SizeChart = () => (
   <div className="sizeChart-container">
     <h2>Size Chart</h2>
-    <table>
-      <tr>
-        <td className="headcol" />
-        {incrementer(72, 97).map(num => <td className="headlong" key={`${num}size`}>{num.toString()}</td>)}
-      </tr>
-      <tr>
-        <td className="headcol">U.S. Men's</td>
-        {usMens.map(num => <td className="long" key={`${num}size`}>{num.toString()}</td>)}
-      </tr>
-      <tr>
-        <td className="headcol">U.S. Women's</td>
-        {usWomens.map(num => <td className="long" key={`${num}size`}>{num.toString()}</td>)}
-      </tr>
-      <tr>
-        <td className="headcol">EU</td>
-        {incrementer(72, 97).map(num => <td className="long" key={`${num}size`}>{num.toString()}</td>)}
-      </tr>
-    </table>
+    <div>
+      <table>
+        <tr>
+          <td className="headcol" />
+          {incrementer(72, 97).map(num => <td className="headlong" key={`${num}size`}>{num.toString()}</td>)}
+        </tr>
+        <tr>
+          <td className="headcol">U.S. Men's</td>
+          {usMens.map(num => <td className="long" key={`${num}size`}>{num.toString()}</td>)}
+        </tr>
+        <tr>
+          <td className="headcol">U.S. Women's</td>
+          {usWomens.map(num => <td className="long" key={`${num}size`}>{num.toString()}</td>)}
+        </tr>
+        <tr>
+          <td className="headcol">EU</td>
+          {incrementer(72, 97).map(num => <td className="long" key={`${num}size`}>{num.toString()}</td>)}
+        </tr>
+      </table>
+    </div>
   </div>
 );
 
