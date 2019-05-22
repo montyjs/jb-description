@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Description = ({
   outsole, bestuse, climbingshoetype, last, upper, lining, footwearclosure, resole, gender, weight,
@@ -76,4 +77,31 @@ const Description = ({
     </div>
   </div>
 );
+
+Description.propTypes = {
+  outsole: PropTypes.string,
+  bestuse: PropTypes.string,
+  climbingshoetype: PropTypes.string,
+  last: PropTypes.string,
+  upper: PropTypes.string,
+  lining: PropTypes.string,
+  footwearclosure: PropTypes.string,
+  resole: PropTypes.string,
+  gender: PropTypes.string,
+  weight: PropTypes.string,
+};
+
+Description.defaultProps = {
+  outsole: '',
+  bestuse: '',
+  climbingshoetype: '',
+  last: '',
+  upper: '',
+  lining: '',
+  footwearclosure: '',
+  resole: '',
+  gender: '',
+  weight: '',
+};
+
 export default Description;

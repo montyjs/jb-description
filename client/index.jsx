@@ -13,6 +13,8 @@ class App extends React.Component {
 
     this.state = {
       data: {},
+      usWomens: [5, 5.5, '5.5+', 6, 6.5, 7, 7.5, '7.5+', 8, 8.5, 9, 9.5, 9.5, 10, 10.5, 11, 11.5, 11.5, 12, 12.5, 13, 13.5, 13.5, 14],
+      usMens: [4, 4.5, '4.5+', 5, 5.5, 6, 6.5, '6.5+', 7, 7.5, 8, 8.5, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 12.5, 13, 14],
     };
   }
 
@@ -37,11 +39,13 @@ class App extends React.Component {
 
   render() {
     const { data } = this.state;
+    const { usWomens } = this.state;
+    const { usMens } = this.state;
     return (
       <div className="descriptionWrapper">
         <Overview {...data} />
         <Description {...data} />
-        <SizeChart />
+        <SizeChart mensSizes={usMens} womensSizes={usWomens} />
       </div>
     );
   }

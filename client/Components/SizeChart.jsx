@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 const incrementer = (start, end) => {
   const array = [];
@@ -11,11 +11,7 @@ const incrementer = (start, end) => {
   return array;
 };
 
-const usMens = [4, 4.5, '4.5+', 5, 5.5, 6, 6.5, '6.5+', 7, 7.5, 8, 8.5, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 12.5, 13, 14];
-
-const usWomens = [5, 5.5, '5.5+', 6, 6.5, 7, 7.5, '7.5+', 8, 8.5, 9, 9.5, 9.5, 10, 10.5, 11, 11.5, 11.5, 12, 12.5, 13, 13.5, 13.5, 14];
-
-const SizeChart = () => (
+const SizeChart = ({ mensSizes, womensSizes }) => (
   <div className="sizeChart-container">
     <h2>Size Chart</h2>
     <div>
@@ -26,11 +22,11 @@ const SizeChart = () => (
         </tr>
         <tr>
           <td className="headcol">U.S. Men's</td>
-          {usMens.map(num => <td className="long" key={`${num}size`}>{num.toString()}</td>)}
+          {mensSizes.map(num => <td className="long" key={`${num}size`}>{num.toString()}</td>)}
         </tr>
         <tr>
           <td className="headcol">U.S. Women's</td>
-          {usWomens.map(num => <td className="long" key={`${num}size`}>{num.toString()}</td>)}
+          {womensSizes.map(num => <td className="long" key={`${num}size`}>{num.toString()}</td>)}
         </tr>
         <tr>
           <td className="headcol">EU</td>
@@ -40,5 +36,16 @@ const SizeChart = () => (
     </div>
   </div>
 );
+
+SizeChart.propTypes = {
+  mensSizes: PropTypes.arrayOf(PropTypes.string),
+  womensSizes: PropTypes.arrayOf(PropTypes.number),
+};
+
+SizeChart.defaultProps = {
+  mensSizes: [],
+  womensSizes: [],
+};
+
 
 export default SizeChart;

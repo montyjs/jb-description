@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Overview = ({
   climbingshoetype, last, resole, upper,
@@ -30,4 +31,19 @@ const Overview = ({
     </div>
   </div>
 );
+
+Overview.propTypes = {
+  climbingshoetype: PropTypes.string,
+  last: PropTypes.string,
+  resole: PropTypes.string,
+  upper: PropTypes.string,
+};
+
+Overview.defaultProps = {
+  climbingshoetype: '',
+  last: '',
+  resole: '',
+  upper: '',
+};
+
 export default Overview;

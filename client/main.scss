@@ -24,7 +24,7 @@ body {
     justify-content: space-around;
     align-items: center;
     .description-features {
-
+      line-height: 1.5;
     }
 
     .description-tech-specs {
@@ -57,7 +57,7 @@ body {
     
     .overview-specs {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       border-top: 1px solid grey;
       padding: 3rem;
     }
