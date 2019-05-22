@@ -38,8 +38,8 @@ const SizeChart = ({ mensSizes, womensSizes }) => (
 );
 
 SizeChart.propTypes = {
-  mensSizes: PropTypes.arrayOf(PropTypes.string || PropTypes.number),
-  womensSizes: PropTypes.arrayOf(PropTypes.string || PropTypes.number),
+  mensSizes: PropTypes.arrayOf(PropTypes.string),
+  womensSizes: PropTypes.arrayOf(PropTypes.string),
 };
 
 SizeChart.defaultProps = {
