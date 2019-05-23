@@ -23,12 +23,34 @@ describe('Description Renders', () => {
 });
 
 describe('Description', () => {
+  const Mock = props => (<Description {...props.product} />);
+  const wrapper = shallow(<Mock product={dummyData} />);
+  const keys = Object.keys(dummyData);
+
+  it('should receive props', () => {
+    wrapper.update();
+    expect(wrapper.props);
+  });
+
   it('renders table with all data', () => {
-    const wrapper = shallow(<Description {...dummyData} />);
-    const keys = Object.keys(dummyData);
+    const wrap = shallow(<Description {...dummyData} />);
     keys.map((key) => {
       const value = dummyData[key];
-      return expect(wrapper.contains(<td>{`${value}`}</td>)).toBe(true);
+      expect(wrap.contains(<td>{`${value}`}</td>)).toBe(true);
     });
+  });
+
+  it('should destructure the props object', () => {
+    wrapper.update();
+    expect(wrapper.prop('outsole')).toEqual('FriXion RS rubber');
+    expect(wrapper.prop('bestuse')).toEqual('Rock Climbing');
+    expect(wrapper.prop('climbingshoetype')).toEqual('Neutral');
+    expect(wrapper.prop('last')).toEqual('Slip-Lasted');
+    expect(wrapper.prop('upper')).toEqual('Leather/synthetic leather');
+    expect(wrapper.prop('lining')).toEqual('No');
+    expect(wrapper.prop('footwearclosure')).toEqual('Lace-up');
+    expect(wrapper.prop('resole')).toEqual('Yes');
+    expect(wrapper.prop('gender')).toEqual('Unisex');
+    expect(wrapper.prop('weight')).toEqual('1 lb. 2.3 oz.');
   });
 });
