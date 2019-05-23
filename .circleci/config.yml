@@ -1,12 +1,13 @@
 version: 2
- jobs:
-   build:
-     docker:
-    #  virtual machine to run your code
-       - image: circleci/node:7
-     steps:
-      # checkout the repo
-       - checkout
-      #  commands to run to complete testing
-       - run: npm install
-      #  - run: jest tests/test-suite.js
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.11.2
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - run:
+          name: install packages
+          command: npm install
