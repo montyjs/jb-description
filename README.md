@@ -23,6 +23,7 @@ Proxy
 1. Run ```sh npm install ``` to install dependencies
 2. Run ```sh npm run build-db ```
 3. Run ```sh npm run seed-db ```
+4. Run ```sh npm run test ``` to test components
 
 ## Requirements
 
