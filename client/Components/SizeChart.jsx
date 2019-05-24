@@ -8,19 +8,19 @@ const SizeChart = ({ mensSizes, womensSizes, euSizes }) => (
       <table>
         <tr>
           <td className="headcol" />
-          {euSizes.map(num => <td className="headlong" key={`${num}headerSize`}>{num}</td>)}
+          {euSizes.map(num => <td className="headlong" key={`${num}headerSize`}>{num.toString()}</td>)}
         </tr>
         <tr>
           <td className="headcol">U.S. Men's</td>
-          {mensSizes.map(num => <td className="long" key={`${num}mensSize`}>{num}</td>)}
+          {mensSizes.map(num => <td className="long" key={`${num}mensSize`}>{num.toString()}</td>)}
         </tr>
         <tr>
           <td className="headcol">U.S. Women's</td>
-          {womensSizes.map(num => <td className="long" key={`${num}womensSize`}>{num}</td>)}
+          {womensSizes.map(num => <td className="long" key={`${num}womensSize`}>{num.toString()}</td>)}
         </tr>
         <tr>
           <td className="headcol">EU</td>
-          {euSizes.map(num => <td className="long" key={`${num}euSize`}>{num}</td>)}
+          {euSizes.map(num => <td className="long" key={`${num}euSize`}>{num.toString()}</td>)}
         </tr>
       </table>
     </div>
