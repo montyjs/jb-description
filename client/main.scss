@@ -2,6 +2,8 @@ html {
   font-size: 10px;
 }
 //take out before proxy, so refactor to find right sizing
+//set a px size in descriptionWrapper
+//refactor all to be em not rem and base it off that sizing in desWrap of 16px
 
 body {
   margin: 0;
@@ -88,7 +90,8 @@ body {
     table {
       border-collapse: separate;
       border-spacing: 0;
-      border-top: 1px solid grey;
+      border: 1px solid grey;
+      tr:nth-child(even) {background-color: #f2f2f2;}
     }
 
     td {
@@ -96,12 +99,14 @@ body {
       border: 1px solid grey;
       white-space: nowrap;
       border-top-width: 0px;
+      height: 56px;
+      min-width: 158px;
     }
 
     div {
-      width: 500px;
+      width: 900px;
       overflow-x: scroll;
-      margin-left: 5em;
+      margin-left: 10.1em;
       padding: 10;
     }
 
