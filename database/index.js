@@ -23,7 +23,6 @@ const getMensSizes = (cb) => {
     if (error) {
       throw error;
     } else {
-      console.log('Database mens sizes', results.rows[0].sizes);
       cb(error, results.rows[0].sizes);
     }
   });
@@ -34,7 +33,6 @@ const getWomensSizes = (cb) => {
     if (error) {
       throw error;
     } else {
-      console.log('Database womens sizes', results.rows[0].sizes);
       cb(error, results.rows[0].sizes);
     }
   });
@@ -45,7 +43,6 @@ const getEuSizes = (cb) => {
     if (error) {
       throw error;
     } else {
-      console.log('Database eu sizes', results.rows[0].sizes);
       cb(error, results.rows[0].sizes);
     }
   });
