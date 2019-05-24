@@ -22,8 +22,10 @@ CREATE TABLE descriptionData (
   quote varchar(250) NOT NULL
 );
 
-CREATE TABLE shoesSizes (
+DROP TABLE IF EXISTS shoeSizes;
+
+CREATE TABLE shoeSizes (
   id SMALLSERIAL,
   name varchar(50) NOT NULL,
-  sizes array NOT NULL,
+  sizes TEXT [] NOT NULL
 );

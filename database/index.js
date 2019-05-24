@@ -18,12 +18,35 @@ const getDescriptions = (cb) => {
   });
 };
 
-const getShoeSizes = (cb) => {
+const getMensSizes = (cb) => {
   pool.query('SELECT * FROM shoeSizes WHERE name = \'mensSizes\'', (error, results) => {
     if (error) {
       throw error;
     } else {
-      cb(error, results.rows[0]);
+      console.log('Database mens sizes', results.rows[0].sizes);
+      cb(error, results.rows[0].sizes);
+    }
+  });
+};
+
+const getWomensSizes = (cb) => {
+  pool.query('SELECT * FROM shoeSizes WHERE name = \'womensSizes\'', (error, results) => {
+    if (error) {
+      throw error;
+    } else {
+      console.log('Database womens sizes', results.rows[0].sizes);
+      cb(error, results.rows[0].sizes);
+    }
+  });
+};
+
+const getEuSizes = (cb) => {
+  pool.query('SELECT * FROM shoeSizes WHERE name = \'euSizes\'', (error, results) => {
+    if (error) {
+      throw error;
+    } else {
+      console.log('Database eu sizes', results.rows[0].sizes);
+      cb(error, results.rows[0].sizes);
     }
   });
 };
@@ -31,4 +54,7 @@ const getShoeSizes = (cb) => {
 module.exports = {
   getDescriptions,
   pool,
+  getMensSizes,
+  getWomensSizes,
+  getEuSizes,
 };
