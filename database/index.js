@@ -18,6 +18,16 @@ const getDescriptions = (cb) => {
   });
 };
 
+const getShoeSizes = (cb) => {
+  pool.query('SELECT * FROM shoeSizes WHERE name = \'mensSizes\'', (error, results) => {
+    if (error) {
+      throw error;
+    } else {
+      cb(error, results.rows[0]);
+    }
+  });
+};
+
 module.exports = {
   getDescriptions,
   pool,
