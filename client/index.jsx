@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import style from './main.scss';
 
-import Overview from './Components/Overview.jsx';
-import Description from './Components/Description.jsx';
-import SizeChart from './Components/SizeChart.jsx';
+import Overview from './Components/Overview';
+import Description from './Components/Description';
+import SizeChart from './Components/SizeChart';
 
 class App extends React.Component {
   constructor(props) {
