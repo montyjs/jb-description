@@ -21,9 +21,17 @@ Proxy
 ## Usage
 
 1. Run ```sh npm install ``` to install dependencies
+2. Make an .env file with this information inside
+- See below:
+```
+PORT=<Port number here>
+DB_USER=<'User name here'>
+DB_PASSWORD=<'Password here'>
+```
 2. Run ```sh npm run build-db ```
 3. Run ```sh npm run seed-db ```
-4. Run ```sh npm run test ``` to test components
+4. Run ```sh npm run build-dev ``` to compile
+5. Run ```sh npm run start ```
 
 ## Requirements
 

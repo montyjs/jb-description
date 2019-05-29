@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import style from './main.scss';
 
 import Overview from './Components/Overview.jsx';
 import Description from './Components/Description.jsx';
@@ -29,7 +28,7 @@ class App extends React.Component {
   getDesciption() {
     $.ajax({
       method: 'GET',
-      url: '/descriptions',
+      url: 'http://localhost:3003/descriptions',
       success: (data) => {
         this.setState({
           data,
@@ -44,7 +43,7 @@ class App extends React.Component {
   getMensSizes() {
     $.ajax({
       method: 'GET',
-      url: '/mensSizes',
+      url: 'http://localhost:3003/mensSizes',
       success: (mens) => {
         this.setState({
           mensSizes: {
@@ -61,7 +60,7 @@ class App extends React.Component {
   getWomensSizes() {
     $.ajax({
       method: 'GET',
-      url: '/womensSizes',
+      url: 'http://localhost:3003/womensSizes',
       success: (womens) => {
         this.setState({
           womensSizes: {
@@ -78,7 +77,7 @@ class App extends React.Component {
   getEuSizes() {
     $.ajax({
       method: 'GET',
-      url: '/euSizes',
+      url: 'http://localhost:3003/euSizes',
       success: (eu) => {
         this.setState({
           euSizes: {
