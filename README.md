@@ -21,18 +21,28 @@ Proxy
 ## Usage
 
 1. Run ```sh npm install ``` to install dependencies
-2. Make an .env file with this information inside
+2. 
+a. For development create an .env file with this information inside
 - See below:
 ```
-PORT=<Port number here>
-DB_USER=<'User name here'>
-DB_PASSWORD=<'Password here'>
+NODE_ENV = 'development'
+LOCAL_PORT= 3003
+LOCAL_USER = <USERNAME>
+LOCAL_HOST = 'localhost'
+LOCAL_DATABASE = 'descriptions'
+LOCAL_PASSWORD = <PASSWORD>
 ```
-3. Set '<USERNAME>' to your psql username in package.json script 'build-db'
-4. Run ```sh npm run build-db ```
-5. Run ```sh npm run seed-db ```
-6. Run ```sh npm run build-dev ``` to compile
-7. Run ```sh npm run start ```
+- You will also need to set '<USERNAME>' to your psql username in package.json script 'build-dev-db'
+- Then run ```sh npm run build-db ``` 
+b. For production create an .env file, set NODE_ENV and a connection string
+- See below:
+```
+NODE_ENV = 'production'
+CON_STRING= <CONNECTION STRING>
+```
+3. Run ```sh npm run seed-db ``` to seed the database
+4. Run ```sh npm run build-dev ``` to compile jsx files
+5. Run ```sh npm run start ``` to start express
 
 ## Requirements
 
