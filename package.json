@@ -9,7 +9,6 @@
   },
   "scripts": {
     "build-dev-db": "psql -d descriptions -U <USERNAME> -f schema.sql",
-    "build-aws-db": "psql --host=descriptions.clhbsbchnbnz.us-east-2.rds.amazonaws.com --port=5432 --username=rei --password --dbname=rei -f schema.sql",
     "seed-db": "node ./database/seed.js",
     "test": "jest --config ./jest.config.js",
     "build-dev": "webpack -d --watch",
