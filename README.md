@@ -20,21 +20,8 @@ Proxy
 
 ## Usage
 
-1. Run ```sh npm install ``` to install dependencies
-2. 
-a. For development create an .env file with this information inside
-- See below:
-```
-NODE_ENV = 'development'
-LOCAL_PORT= 3003
-LOCAL_USER = <USERNAME>
-LOCAL_HOST = 'localhost'
-LOCAL_DATABASE = 'descriptions'
-LOCAL_PASSWORD = <PASSWORD>
-```
-- You will also need to set '<USERNAME>' to your psql username in package.json script 'build-dev-db'
-- Then run ```sh npm run build-db ``` 
-b. For production create an .env file, set NODE_ENV and a connection string
+1. Run ```sh npm install``` to download dependencies
+2. For production create an .env file, set NODE_ENV and a connection string
 - See below:
 ```
 NODE_ENV = 'production'
@@ -52,6 +39,23 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 - etc
 
 ## Development
+
+1. Run ```sh npm install ``` to install dependencies
+2. For development create an .env file with this information inside
+  -  See below:
+```
+NODE_ENV = 'development'
+LOCAL_PORT= 3003
+LOCAL_USER = <USERNAME>
+LOCAL_HOST = 'localhost'
+LOCAL_DATABASE = 'descriptions'
+LOCAL_PASSWORD = <PASSWORD>
+```
+3. You will also need to set '<USERNAME>' to your psql username in package.json script 'build-dev-db'
+4. Run ```sh npm run build-db ``` to build database
+5. Run ```sh npm run seed-db ``` to seed the database
+6. Run ```sh npm run build-dev ``` to compile jsx files
+7. Run ```sh npm run start ``` to start express
 
 ### Installing Dependencies
 
