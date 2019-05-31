@@ -4,12 +4,12 @@ RUN mkdir -p /src/app
 
 WORKDIR /src/app
 
+COPY package.json /src/app
+
+RUN npm install
+
 COPY . /src/app
 
-RUN yarn install
+EXPOSE 3003
 
-RUN yarn global add nodemon
-
-EXPOSE 8080
-
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "start" ]
